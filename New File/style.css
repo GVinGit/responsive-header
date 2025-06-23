@@ -1,0 +1,202 @@
+body {
+    /* background: url('gv.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-position: absolute; */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow-y: hidden;
+}
+
+header{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); ;
+    backdrop-filter: blur(5px);
+    height: 10vh;
+    border-bottom: ghostwhite 1px solid;
+    border-top: ghostwhite 1px solid;
+    width: 100%;
+}
+
+.logo{
+    letter-spacing: -6px;
+    text-decoration: none;
+    font-size: 3rem;
+    /* margin-left: 5%; */
+    padding: 10px;
+    color: ghostwhite;
+    /* border-right: ghostwhite 2px solid; */
+}
+
+.btn{
+    color: ghostwhite;
+    text-decoration: none;
+    padding: .5rem 1.5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    background-color: transparent;
+    box-shadow: ghostwhite 0px 0px 5px;
+    border-radius: 10px;
+    border: ghostwhite 1px solid;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: ghostwhite;
+    color: black;
+    box-shadow: ghostwhite 0px 0px 15px;
+}
+
+/* header p {
+    font-size: 2rem;
+    color: ghostwhite;
+} */
+
+nav {
+    padding: 20px;
+}
+
+nav ul {
+    gap: 25px;
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: ghostwhite;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: ghostwhite;
+    color: black;
+    box-shadow: ghostwhite 0px 0px 15px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: ghostwhite;
+  font-size: 2rem;
+  cursor: pointer;
+}
+/* ========================= */
+/* FINAL DO HEADER */
+
+
+/* ========================= */
+
+
+
+
+
+
+
+
+
+
+/* Celular */
+@media (max-width: 700px) {
+ header{
+    /* position: fixed;
+    display: flex; */
+    justify-content: space-between;
+    /* align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); ;
+    backdrop-filter: blur(5px);
+    height: 10vh;
+    border-bottom: ghostwhite 1px solid;
+    border-top: ghostwhite 1px solid;
+    width: 100%; */
+}
+
+.logo{
+    /* letter-spacing: -6px;
+    text-decoration: none; */
+    font-size: 2.5rem;
+    /* padding: 10px;
+    color: ghostwhite; */
+}
+
+.btn{
+    /* color: ghostwhite;
+    text-decoration: none; */
+    padding: .4rem 1rem;
+    /* font-weight: bold;
+    letter-spacing: 2px;
+    background-color: transparent;
+    box-shadow: ghostwhite 0px 0px 5px;
+    border-radius: 10px;
+    border: ghostwhite 1px solid;
+    transition: 0.3s; */
+}
+
+
+nav {
+    display: none;
+    padding: 20px;
+}
+
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  color: ghostwhite;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.menu-toggle:hover {
+    background-color: red;
+}
+
+  .nav-menu.active {
+      display: block;
+      position: absolute;
+      top: 10vh;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.95);
+      z-index: 1000;
+  }
+
+  .nav-menu ul {
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 20px;
+  }
+
+
+
+
+
+
+
+
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1024px) { 
+  /* Estilos para tablets */    
+}
+
+/* Desktop (notebook/PC) */
+@media (min-width: 1025px) { 
+  /* Estilos para telas grandes */
+}
