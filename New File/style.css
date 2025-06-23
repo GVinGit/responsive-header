@@ -1,4 +1,4 @@
-body {
+body{
     /* background: url('gv.jpg') no-repeat center center fixed;
     background-size: cover;
     background-position: absolute; */
@@ -20,16 +20,19 @@ header{
     border-bottom: ghostwhite 1px solid;
     border-top: ghostwhite 1px solid;
     width: 100%;
+    transition: 0.3s ease;
 }
 
 .logo{
     letter-spacing: -6px;
     text-decoration: none;
     font-size: 3rem;
+    font-family: a;
     /* margin-left: 5%; */
     padding: 10px;
     color: ghostwhite;
     /* border-right: ghostwhite 2px solid; */
+    transition: 0.3s ease;
 }
 
 .btn{
@@ -43,13 +46,14 @@ header{
     box-shadow: ghostwhite 0px 0px 5px;
     border-radius: 10px;
     border: ghostwhite 1px solid;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-.btn:hover {
+.btn:hover{
     background-color: ghostwhite;
     color: black;
     box-shadow: ghostwhite 0px 0px 15px;
+    transition: 0.3s ease;
 }
 
 /* header p {
@@ -57,11 +61,11 @@ header{
     color: ghostwhite;
 } */
 
-nav {
+nav{
     padding: 20px;
 }
 
-nav ul {
+nav ul{
     gap: 25px;
     list-style: none;
     display: flex;
@@ -70,7 +74,7 @@ nav ul {
     padding: 0;
 }
 
-nav a {
+nav a{
     color: ghostwhite;
     text-decoration: none;
     padding: 10px;
@@ -81,13 +85,18 @@ nav a {
     transition: 0.3s;
 }
 
-nav a:hover {
+nav a:hover{
     background-color: ghostwhite;
     color: black;
     box-shadow: ghostwhite 0px 0px 15px;
 }
 
-.menu-toggle {
+
+
+
+
+
+.menu-toggle{
   display: none;
   background: none;
   border: none;
@@ -146,57 +155,71 @@ nav a:hover {
     transition: 0.3s; */
 }
 
-
 nav {
     display: none;
     padding: 20px;
-}
+  }
 
-.menu-toggle {
-  display: flex;
-  background: none;
-  border: none;
-  color: ghostwhite;
-  font-size: 2rem;
-  cursor: pointer;
-}
+  /* --- INÍCIO DAS ALTERAÇÕES PARA O MENU RESPONSIVO --- */
+  /* Esconde o nav-menu por padrão no mobile */
+  .nav-menu {
+    display: none;
+    position: fixed;
+    top: 10.1vh;
+    left: 0;
+    height: 100vh;
+    width: 45vw;
+    background: rgba(0,0,0,0.97);
+    z-index: 100;
+    box-shadow: ghostwhite 0px 0px 5px;
+    border-right: ghostwhite 1px solid;
+    transition: 0.3s ease;
+    transform: translateX(100%);
+  }
 
-.menu-toggle:hover {
-    background-color: red;
-}
-
+  /* Mostra o nav-menu como uma aba lateral quando ativo */
   .nav-menu.active {
-      display: block;
-      position: absolute;
-      top: 10vh;
-      left: 0;
-      width: 100%;
-      background: rgba(0,0,0,0.95);
-      z-index: 1000;
+    display: block;
+    transform: translateX(0);
+    transition: 0.3s ease;
   }
 
   .nav-menu ul {
-      flex-direction: column;
-      gap: 10px;
-      align-items: flex-start;
-      padding: 20px;
+    flex-direction: column;
+    gap: 50px;
+    align-items: flex-start;
+    padding: 40px 20px;
   }
 
+  .nav-menu a {
+    font-size: 1.3rem;
+    /* border-bottom-width: 100%; */
+    border-radius: 0px;
+    width: 100rem;
+    border-bottom: ghostwhite 1px solid;
 
+  }
+  /* --- FIM DAS ALTERAÇÕES PARA O MENU RESPONSIVO --- */
 
+  nav {
+    display: block;
+    padding: 0;
+  }
 
+  .menu-toggle {
+    display: flex;
+    background: none;
+    align-content: center;
+    justify-content: center;
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: ghostwhite;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
 
-
-
-
-}
-
-/* Tablet */
-@media (min-width: 601px) and (max-width: 1024px) { 
-  /* Estilos para tablets */    
-}
-
-/* Desktop (notebook/PC) */
-@media (min-width: 1025px) { 
-  /* Estilos para telas grandes */
+  .menu-toggle:hover {
+    text-shadow: ghostwhite 0px 0px 20px;
+  }
 }
