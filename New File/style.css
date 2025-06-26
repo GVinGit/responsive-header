@@ -14,8 +14,8 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5); ;
-    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px); 
     height: 10vh;
     border-bottom: ghostwhite 1px solid;
     border-top: ghostwhite 1px solid;
@@ -146,6 +146,7 @@ nav a:hover{
     /* color: ghostwhite;
     text-decoration: none; */
     padding: .4rem 1rem;
+    margin-right: 1.5vh;
     /* font-weight: bold;
     letter-spacing: 2px;
     background-color: transparent;
@@ -163,25 +164,25 @@ nav {
   /* --- INÍCIO DAS ALTERAÇÕES PARA O MENU RESPONSIVO --- */
   /* Esconde o nav-menu por padrão no mobile */
   .nav-menu {
-    display: none;
+    display: block;
     position: fixed;
-    top: 10.1vh;
+    top: 10vh;
     left: 0;
     height: 100vh;
     width: 45vw;
     background: rgba(0,0,0,0.97);
     z-index: 100;
-    box-shadow: ghostwhite 0px 0px 5px;
+    /* box-shadow: ghostwhite 0px 0px 5px; */
     border-right: ghostwhite 1px solid;
-    transition: 0.3s ease;
-    transform: translateX(100%);
+    border-top: ghostwhite 1px solid;
+    transform: translateX(-110%);
   }
 
   /* Mostra o nav-menu como uma aba lateral quando ativo */
   .nav-menu.active {
     display: block;
-    transform: translateX(0);
-    transition: 0.3s ease;
+    transform: translateX(-1%);
+    transition: 0.5s ease-in-out;
   }
 
   .nav-menu ul {
@@ -197,7 +198,13 @@ nav {
     border-radius: 0px;
     width: 100rem;
     border-bottom: ghostwhite 1px solid;
+  }
 
+  .nav-menu a:hover {
+    background-color: transparent;
+    opacity: .7;
+    color: ghostwhite;
+    box-shadow: none;
   }
   /* --- FIM DAS ALTERAÇÕES PARA O MENU RESPONSIVO --- */
 
@@ -212,6 +219,7 @@ nav {
     align-content: center;
     justify-content: center;
     padding: 2px 5px;
+    margin-left: .5vh;
     border-radius: 5px;
     color: ghostwhite;
     font-size: 2rem;
